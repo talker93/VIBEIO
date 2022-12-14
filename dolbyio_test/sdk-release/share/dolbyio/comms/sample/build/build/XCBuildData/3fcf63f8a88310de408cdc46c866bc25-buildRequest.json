@@ -1,0 +1,61 @@
+{
+  "_buildCommand2" : {
+    "command" : "build",
+    "skipDependencies" : false,
+    "style" : "buildAndRun"
+  },
+  "buildCommand" : "build",
+  "configuredTargets" : [
+    {
+      "guid" : "86f9582e4e2a4433610732bbdb5d04401c6be9064ce371c517d98dfe29d1c6ba"
+    },
+    {
+      "guid" : "86f9582e4e2a4433610732bbdb5d04409b821feaa78fb9dc44bacf1a87b10eac"
+    }
+  ],
+  "containerPath" : "/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/dolbyio_comms_sample_code.xcodeproj",
+  "continueBuildingAfterErrors" : false,
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "activeArchitecture" : "x86_64",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : false,
+      "platform" : "macosx",
+      "sdk" : "macosx12.1",
+      "sdkVariant" : "macos",
+      "supportedArchitectures" : [
+        "arm64e",
+        "arm64",
+        "x86_64"
+      ],
+      "targetArchitecture" : "x86_64"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "",
+      "buildProductsPath" : "",
+      "derivedDataPath" : "/Users/shanjiang/Library/Developer/Xcode/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/shanjiang/Library/Developer/Xcode/DerivedData/dolbyio_comms_sample_code-bmhjmqemtswkhccskfrxyquvseyu/Index/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/shanjiang/Library/Developer/Xcode/DerivedData/dolbyio_comms_sample_code-bmhjmqemtswkhccskfrxyquvseyu/Index/PrecompiledHeaders",
+      "pchPath" : ""
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "synthesized" : {
+        "table" : {
+          "ENABLE_PREVIEWS" : "NO"
+        }
+      }
+    }
+  },
+  "schemeCommand" : "launch",
+  "schemeCommand2" : "launch",
+  "shouldCollectMetrics" : false,
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}

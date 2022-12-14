@@ -1,0 +1,368 @@
+.. _getting_started:
+
+Getting Started
+===============
+
+This guide will help you create a simple conference application. Make sure to read the :ref:`run_time_deps` before getting started to note any platform specific runtime requirements.
+
+Contents of the SDK package
+---------------------------
+
+All C++ SDK packages are available on GitHub: https://github.com/DolbyIO/comms-sdk-cpp/releases.
+
+The following table lists the contents of the C++ SDK package:
+
+ +---------------+-----------------------------------------------------------------------------------+
+ | Directory     |   Contents                                                                        |
+ +===============+===================================================================================+
+ | include       | Header files constituting the public API                                          |
+ +---------------+-----------------------------------------------------------------------------------+
+ | lib           | Shared libraries constituting the C++ SDK                                         |
+ +---------------+-----------------------------------------------------------------------------------+
+ | share         | Cmake files for building target, samples, docs, and licenses                      |
+ +---------------+-----------------------------------------------------------------------------------+
+ | bin           | Prebuilt sample application binaries                                              |
+ +---------------+-----------------------------------------------------------------------------------+
+
+.. note::
+ On macOS, it is necessary to unquarantine SDK libraries and sample binaries. Otherwise, quarantine attributes prevent their usage. The simplest way to unquarantine is to strip the quarantine attributes recursively for all the files in the package. The following example presents how to do this via terminal and the macOS attribute stripping command line tool:
+
+ **xattr -d -r com.apple.quarantine sdk-release/**
+
+CA certificates
+---------------
+The SDK uses Certificate Authority (CA) certificates to authenticate the identity of remote servers during an SSL handshake. The SDK library provides two options for selecting CA certificates:
+
+- The SDK library contains built-in CA certificates that are used by default.
+- The SDK library checks the value of the **DOLBYIO_COMMS_CA_CERT_FILE** environment variable. If the ENV variable points to a proper certificate file, these certificates are loaded.
+
+The SDK does not try to use the system-installed CA certificate files.
+
+Getting the access token
+------------------------
+Applications using the C++ SDK must provide an access token when creating the SDK. The sample applications provided as a part of the sdk-release package require the access token to be provided as a command line parameter when launching the executable. To get the access token from the Dolby.io dashboard, follow these instructions: https://docs.dolby.io/communications-apis/docs/overview-developer-tools 
+
+After getting the access token, you can build and run the :ref:`Desktop <getting_started_sample>` sample application.  
+
+Spatial audio conferences
+-------------------------
+If you join a spatial audio conference using the :ref:`Desktop <getting_started_sample>` application, you need to set your spatial position. The sample application sets the default spatial position for local participant
+to (0,0,0). For more information on interactively changing the position, please refer the interactive commands section of the sample application. 
+
+.. _getting_started_sample:
+
+Sample application
+------------------
+.. note::
+  Samples are only provided to illustrate the programming concept with the C++ SDK, and should only be used as a design reference by developers.
+
+A basic C++ sample application is available in the **sdk-release/share/dolbyio/comms/sample/desktop_app/** directory of the package. This directory contains C++ code for the application and the respective CMakeLists.txt file, which you can use to build the application.
+
+Note that most of the interaction with the SDK itself are located in the **sdk-release/share/dolbyio/comms/sample/utilities/** directory of the package. This is still sample code but it can be thought of as like an
+example of a simple wrapper over the SDK.
+
+To showcase all of the features of the SDK the sample application can be run in two modes, **Standard or Media IO**. **Standard Mode** this mode demonstrates the standard client application workflow that uses media 
+peripheral devices. For example, how to implement a client to connect to a spatial audio conference. The :ref:`Media IO <media_io_api>` features are enabled by setting the **--enable-media-io** command line 
+switch when starting the application. Our sample application links all of the additional required libraries for Media IO features as it is a showcase application. Please note that you should only link what you need to 
+reduce your binary size.
+
+All applications must perform the following steps in order to connect/disconnect from Dolby.io conferences:
+
+  1) :cpp:func:`Create and initialize <dolbyio::comms::sdk::create>` the SDK. This must be done first to get access to the SDK services.
+  2) :cpp:func:`Open <dolbyio::comms::services::session::open>` a Dolby.io session. The session::open call returns a :cpp:struct:`user_info <dolbyio::comms::services::session::user_info>` object which contains the participant ID.
+  3) :cpp:func:`Create <dolbyio::comms::services::conference::create>` and :cpp:func:`join <dolbyio::comms::services::conference::join>` a specific conference.
+  4) :cpp:func:`Leave <dolbyio::comms::services::conference::leave>` the conference.
+  5) :cpp:func:`Close <dolbyio::comms::services::session::close>` the Dolby.io session.
+
+Standard Mode
+_____________
+In the **Standard Mode** the sample app can also:
+
+  1) Manage local audio  and video devices using the :cpp:class:`device_management <dolbyio::comms::services::device_management>` service.
+  2) :cpp:func:`provide <dolbyio::comms::services::local_video::start>` a camera and possibly a :cpp:class:`video frame handler <dolbyio::comms::video_frame_handler>` to stream video into the conference.
+  3) The :cpp:class:`video frame handler <dolbyio::comms::video_frame_handler>` can be used to display the camera locally, inject non-camera video, or process camera frames and then inject the processed video. :ref:`cv_p_example` section shows how to create a video processor which can then be attached to the SDK using step 2.
+  4) :cpp:func:`set audio capture mode <dolbyio::comms::services::local_audio::set_capture_mode>` to alter how capture microphone audio is processed before being sent to the conference.
+  5) Use the :cpp:class:`local audio <dolbyio::comms::services::local_audio>` and :cpp:class:`local video <dolbyio::comms::services::local_video>` services to start/stop audio/video whilst in the conference.
+  6) Set a :cpp:class:`video sink <dolbyio::comms::video_sink>` using the remote video service :cpp:func:`set sink <dolbyio::comms::services::remote_video::set_sink>` function to receive incoming video streams from remote participants.
+  7) Start/stop receiving the audio streams of desired participants using the :cpp:class:`remote audio service <dolbyio::comms::services::remote_audio>`.
+
+Media IO Mode
+_______________________
+In the **Media IO Mode** the sample app can:
+
+  1) :cpp:func:`Set Audio Source <dolbyio::comms::services::media_io::set_audio_source>` for the conference to provide audio to the conference from some external source. This means Opus Codec will be used and thus to use the :cpp:class:`Audio Source <dolbyio::comms::audio_source>` it must be set prior to conference creation.
+  2) :cpp:func:`Set Audio Sink <dolbyio::comms::services::media_io::set_audio_sink>` for the conference to receive PCM audio from conference participants. This means Opus Codec will be used and thus to use the :cpp:class:`Audio Sink <dolbyio::comms::audio_sink>` must be set prior to conference creation.
+  3) :cpp:func:`Set Encoded Video Sink <dolbyio::comms::services::media_io::set_encoded_video_sink>` for the conference to receive video frames before they are decoded. This must be called before the conference is created, but it does not prevent applications from receiving the decoded video frames as well.
+
+The sample application makes use of the :cpp:func:`dolbyio::comms::wait` call for all asynchronous operations. Additionally, the sample application makes use of the Default Media Recorder module. If you would like to write your own Media Recorder, see the :ref:`recording_example` section. The sample application also uses the Default Media Injector module and the sample Media Source File library. If you would like to write your own Media Injector, see the 
+:ref:`injection_example` section. If you would like to write your own Media Source for the injector, see the :ref:`Media Source File <media_source_file>` section, as well as the sample library itself.
+
+.. _build_run_sample:
+
+Build and run the sample application
+_______________________________________
+
+1. Build the desktop application in a few simple steps from the **sample/** directory:
+
+.. code-block:: console
+
+        $ cd sdk-release/share/dolbyio/comms/sample/
+        $ mkdir build
+        $ cd build/ && cmake ../
+        $ cmake --build . -j 8
+		[  4%] Building CXX object custom_recorder/CMakeFiles/custom_recorder.dir/custom_recorder.cc.o
+		[ 13%] Building CXX object media_source/CMakeFiles/media_source_file.dir/file/source_capture.cc.o
+		[ 21%] Building CXX object custom_injector/CMakeFiles/custom_injector.dir/custom_injector.cc.o
+		[ 21%] Building CXX object custom_video_processor/CMakeFiles/custom_video_processor.dir/custom_video_processor.cc.o
+		[ 30%] Building CXX object media_source/CMakeFiles/media_source_file.dir/file/utils/audio_buffer.cc.o
+		[ 30%] Building CXX object media_source/CMakeFiles/media_source_file.dir/file/libav_wrapper/avcontext.cc.o
+		[ 30%] Building CXX object media_source/CMakeFiles/media_source_file.dir/file/libav_wrapper/decoder.cc.o
+		[ 34%] Building CXX object media_source/CMakeFiles/media_source_file.dir/file/libav_wrapper/frame.cc.o
+		[ 39%] Building CXX object media_source/CMakeFiles/media_source_file.dir/file/utils/media_frame.cc.o
+		[ 43%] Linking CXX static library libcustom_injector.a
+		[ 43%] Built target custom_injector
+		[ 52%] Linking CXX static library libmedia_source_file.a
+		[ 52%] Linking CXX static library libcustom_recorder.a
+		[ 56%] Built target custom_recorder
+		[ 56%] Built target media_source_file
+		[ 56%] Built target custom_video_processor
+		[ 65%] Building CXX object utilities/CMakeFiles/utils.dir/sdk/interactions.cc.o
+		[ 69%] Building CXX object utilities/CMakeFiles/utils.dir/sdk/events.cc.o
+		[ 78%] Building CXX object utilities/CMakeFiles/utils.dir/commands_handler.cc.o
+		[ 82%] Building CXX object utilities/CMakeFiles/utils.dir/ui_loop/ui.cc.o
+		[ 86%] Building CXX object utilities/CMakeFiles/utils.dir/ui_loop/macos_ui.mm.o
+		[ 86%] Building CXX object utilities/CMakeFiles/utils.dir/media/media_io_interactions.cc.o
+		[ 86%] Building CXX object utilities/CMakeFiles/utils.dir/sdk/device_manager/interactions.cc.o
+		[ 91%] Linking CXX static library libutils.a
+		[ 91%] Built target utils
+		[ 95%] Building CXX object desktop_app/CMakeFiles/desktop_app.dir/desktop_app.cc.o
+		[100%] Linking CXX executable desktop_app
+		[100%] Built target desktop_app
+
+
+2. Run the created **desktop_app** executable using the following command line parameters:
+
+ +-----------------------+------------------------------------------------------------------------------------------+
+ | Argument              | Description                                                                              |
+ +=======================+==========================================================================================+
+ | -h                    | Print the help menu.                                                                     |
+ +-----------------------+------------------------------------------------------------------------------------------+
+ | -u                    | The participant's name.                                                                  |
+ +-----------------------+------------------------------------------------------------------------------------------+
+ | -e                    | The external ID                                                                          |
+ +-----------------------+------------------------------------------------------------------------------------------+
+ | -k                    | The access token                                                                         |
+ +-----------------------+------------------------------------------------------------------------------------------+
+ | -c                    | The conference alias (DEMO to join a demo conference)                                    |
+ +-----------------------+------------------------------------------------------------------------------------------+
+ | -t                    | The conference access token                                                              |
+ +-----------------------+------------------------------------------------------------------------------------------+
+ | -i                    | The conference ID                                                                        |
+ +-----------------------+------------------------------------------------------------------------------------------+
+ | -l                    | The SDK logging level (0-5)                                                              |
+ +-----------------------+------------------------------------------------------------------------------------------+
+ | -ml                   | The Media Engine logging level (0-5)                                                     |
+ +-----------------------+------------------------------------------------------------------------------------------+
+ | -p                    | The user type (user or listener)                                                         |
+ +-----------------------+------------------------------------------------------------------------------------------+
+ | -s                    | The send-only mode                                                                       |
+ +-----------------------+------------------------------------------------------------------------------------------+
+ | -m <AV>               | The initial media to send (A || V || AV)                                                 |
+ +-----------------------+------------------------------------------------------------------------------------------+
+ | -spatial              | Spatial audio (shared|individual|disabled)                                               |
+ +-----------------------+------------------------------------------------------------------------------------------+
+ | -log_speaker          | Logs the active speaker changes  (yes|no)                                                |
+ +-----------------------+------------------------------------------------------------------------------------------+
+ | -simulcast            | Join with simulcast enabled                                                              |
+ +-----------------------+------------------------------------------------------------------------------------------+
+ | -no-display-video     | Do not render video incoming video (sampleapp only renders incoming video on macOS)      |
+ +-----------------------+------------------------------------------------------------------------------------------+
+ | -enable-media-io      | Enable the sample applications Media IO features (injection/recording)                   |
+ +-----------------------+------------------------------------------------------------------------------------------+
+ | -d                    | the relative path to outputdirectory (only considered if Media IO features enabled)      |
+ +-----------------------+------------------------------------------------------------------------------------------+
+ | -v                    | The video format for recording  (only considered if Media IO features enabled)           |
+ +-----------------------+------------------------------------------------------------------------------------------+
+ | -a                    | The audio format for recording   (only considered if Media IO features enabled)          |
+ +-----------------------+------------------------------------------------------------------------------------------+
+ | -p                    | The user type (user or listener)  (only considered if Media IO features enabled)         | 
+ +-----------------------+------------------------------------------------------------------------------------------+
+ | -m                    | The initial media to inject  (only considered if Media IO features enabled)              |
+ +-----------------------+------------------------------------------------------------------------------------------+
+ | -f                    | The name of a media file to inject (only considered if Media IO features enabled)        |
+ +-----------------------+------------------------------------------------------------------------------------------+
+ | -s                    | The send-only mode  (only considered if Media IO features enabled)                       |
+ +-----------------------+------------------------------------------------------------------------------------------+
+ | -V, -max_vfs          | Max video forwarding strategy                                                            |
+ +-----------------------+------------------------------------------------------------------------------------------+
+
+For example:
+
+.. code-block:: console
+        
+        $ ./desktop_app -u USERNAME -k ACCESS_TOKEN -i CONF_ID -l LOG_LEVEL -ml LOG_LEVEL_MEDIA -p user -m AV -spatial shared
+		   
+			 or
+
+        $ ./desktop_app -u USERNAME -k ACCESS_TOKEN -i CONF_ID -l LOG_LEVEL -ml LOG_LEVEL_MEDIA -p user -enable-media-io -d PATH_TO_DUMP_DIRECTORY -m AV -f SOME_FILE.mp4 -spatial shared
+
+
+.. note::
+	Providing the **-i** command line parameter causes that the application joins the specific conference if the conference with the provided ID already exists. Providing **-c** causes that the application joins the specific conference. 
+	If the requested conference does not exist on the Dolby.io backend the application creates and joins the conference. Providing a **DEMO** value of the **-c** parameter causes that the application creates and joins a demo conference.
+	If you do not provide **CONFERENCE_ID** nor **CONFERENCE_ALIAS** when joining, the application will open a session with the Dolby.io backend and wait for interactions. In this scenario, it is possible
+	to listen for subscription or invitation events, get invited to conferences and invite others.
+
+
+3. Interact with the **desktop_app** executable using one of the following command line options, which can be provided whilst the application is running. The application will prompt the user for input and
+explain each of the options. If the chosen option requires more input, the user will be explicitly prompted for this as well. 
+
+ +--------------------------+----------------------------------------------------------------+
+ | Option                   | Description                                                    |
+ +==========================+================================================================+
+ | q                        | Quits the application                                          |
+ +--------------------------+----------------------------------------------------------------+
+ | stop-audio               | Stops the local audio                                          |
+ +--------------------------+----------------------------------------------------------------+
+ | start-audio              | Starts the local audio                                         |
+ +--------------------------+----------------------------------------------------------------+
+ | v                        | Stops the local video                                          |
+ +--------------------------+----------------------------------------------------------------+
+ | V                        | Starts the local video                                         |
+ +--------------------------+----------------------------------------------------------------+
+ | stop-audio-remote        | Stops remote audio in a Dolby Voice conference                 |
+ +--------------------------+----------------------------------------------------------------+
+ | start-audio-remote       | Starts remote audio in a Dolby Voice conference                |
+ +--------------------------+----------------------------------------------------------------+
+ | m                        | Sends a message to a conference                                |
+ +--------------------------+----------------------------------------------------------------+
+ | P                        | Lists conference participants                                  |
+ +--------------------------+----------------------------------------------------------------+
+ | S                        | Sets a spatial audio configuration                             |
+ +--------------------------+----------------------------------------------------------------+
+ | mute                     | Mutes the local participant's microphone                       |
+ +--------------------------+----------------------------------------------------------------+
+ | unmute                   | Un-mutes the local participant's microphone                    |
+ +--------------------------+----------------------------------------------------------------+
+ | mute-remote              | Mutes a remote participant in a non-Dolby Voice conference     |
+ +--------------------------+----------------------------------------------------------------+
+ | unmute-remote            | Un-mutes a remote participant in a non-Dolby Voice conference  |
+ +--------------------------+----------------------------------------------------------------+
+ | k                        | Sets output audio mute                                         |
+ +--------------------------+----------------------------------------------------------------+
+ | K                        | Sets output audio un-mute                                      |
+ +--------------------------+----------------------------------------------------------------+
+ | invite                   | Invites a participant to a conference                          |
+ +--------------------------+----------------------------------------------------------------+
+ | subscribe                | Subscribes to all conference events                            |
+ +--------------------------+----------------------------------------------------------------+
+ | unsubscribe              | Unsubscribes from all conference events                        |
+ +--------------------------+----------------------------------------------------------------+
+ | join                     | Joins a conference by providing ID                             |
+ +--------------------------+----------------------------------------------------------------+
+ | create                   | Creates a conference by providing alias                        |
+ +--------------------------+----------------------------------------------------------------+
+ | accept                   | Accepts a conference invitation                                |
+ +--------------------------+----------------------------------------------------------------+
+ | decline                  | Declines a conference invitation                               |
+ +--------------------------+----------------------------------------------------------------+
+ | audio-level              | Get audio level for a single participant                       |
+ +--------------------------+----------------------------------------------------------------+
+ | audio-levels             | Get audio levels for all participants in a conference          |
+ +--------------------------+----------------------------------------------------------------+
+ | set-audio-capture-mode   | Set the audio capture mode.                                    |
+ +--------------------------+----------------------------------------------------------------+
+ | get-audio-capture-mode   | Get the current audio capture mode.                            |
+ +--------------------------+----------------------------------------------------------------+
+ | audio-levels             | Get audio levels for all participants in a conference          |
+ +--------------------------+----------------------------------------------------------------+
+ | q                        | Quits the application                                          |
+ +--------------------------+----------------------------------------------------------------+
+ | f*                       | Sets a new media file to play (if media io enabled)            |
+ +--------------------------+----------------------------------------------------------------+
+ | F*                       | Adds a new media file to a playlist (if media io enabled)      |
+ +--------------------------+----------------------------------------------------------------+
+ | p*                       | Pauses the file injection  (if media io enabled)               |
+ +--------------------------+----------------------------------------------------------------+
+ | r*                       | Resumes the paused file injection  (if media io enabled)       |
+ +--------------------------+----------------------------------------------------------------+
+ | s*                       | Seeks to time in the file  (if media io enabled)               |
+ +--------------------------+----------------------------------------------------------------+
+
+Please note that in the media io enabled mode the sample application methods that start and stop audio consist of two parts. For example for starting audio, the first step uses the 
+:cpp:func:`dolbyio::comms::services::local_audio::start` method, which attaches an audio track to the active PeerConnection. This method resolves once the audio track has been successfully
+added. Once this method is resolved, the injection of audio from the Media Source starts. The following code block presents the entire procedure:
+
+.. code-block:: c++
+
+	sdk->audio().local()
+        .start_()
+        .then([injection_src]() {
+          std::cerr << "start audio success" << std::endl;
+          if (injection_src)
+            injection_src->set_audio_capture(true);
+        })
+        .on_error([](std::exception_ptr&& e) {
+          try {
+            std::rethrow_exception(e);
+          } catch (std::exception& e) {
+            std::cerr << "start audio failed: " << e.what() << std::endl;
+          }
+        });
+
+.. _cv_p_example:
+
+Video processor
+________________
+The **share/dolby/comms/sample/custom_video_processor/** directory contains cpp and header files to build a library implementing a custom video processor. In order for this processor to be used by the C++ SDK it must be 
+provided as the :cpp:class:`dolbyio::comms::video_frame_handler` with the :cpp:func:`dolbyio::comms::services::local_video::start` function call.
+
+.. note::
+ For macOS the captured camera frames are stored in shared IOSurface. This sample processes the frames in place. A proper application implementation should make a copy of the CVPixelBuffer
+ and underlying IOSurface and only then process its copy of these memory buffers. Otherwise other applications capturing from the same video device will have their frames altered as well.
+
+.. note::
+ For macOS Video Support relies on the presence and running of the macOS main event loop. If you try to start video before you have executed something like **[NSApp run]** the SDK will throw an exception.
+ Thus any calls to :cpp:func:`start_video <dolbyio::comms::services::local_video::start>` must be done after the main event loop has been started.
+
+The interfaces inheritted by this custom_video_processor example must be implemented by any custom video processor which wishes to receive video frames and have somehwere to inject them.
+
+Adding this sample custom video procesor to any app is very simple, here we show basic instructions for integrating it with our sample desktop_app:
+
+1) Edit the **share/dolby/comms/sample/utilities/CMakeLists.txt** file so it links the custom_video_processor shared library by modifying the following:
+
+.. code-block:: console
+    
+	target_link_libraries(utils PUBLIC
+		custom_video_processor
+    	media_source_file
+    	DolbyioComms::multimedia_streaming_addon
+    	DolbyioComms::media
+	)
+
+
+2) Next edit the **share/dolby/comms/sample/utilities/ui_loop/ui.cc** file to include the custom_processor header file. Then finally inside the **ui_interface::ui_loop_on_helper_thread** method create a processor and 
+provide the processor to the SDK using the :cpp:func:`start video <dolbyio::comms::services::local_video::start>` method. Essentially you just need to add 3 lines of code in respective places as show below:
+
+.. code-block:: c++
+ 	
+	#include "comms/sample/custom_video_processor/custom_video_processor.h"
+
+	...
+
+	void ui_interface::ui_loop_on_helper_thread() {
+		auto processor = std::make_unique<custom_video_processor>();
+		try {
+			...
+			wait(sdk->video().local().start({}, processor.get()));
+			...
+
+3) Then follow the :ref:`build_run_sample` instructions of Getting Started and you will have built your editted desktop_app
+
+Issues Linking?
+---------------
+If you have problems with running the application due to a not-found media library, set the **LD_LIBRARY_PATH** to the location of the **sdk-release/lib** directory. If you plan to move the libraries to different locations, include these locations in the paths. The path can be set as follows:
+
+.. code-block:: console
+        
+        $ export LD_LIBRARY_PATH=/path/to/sdk-release/lib/:$LD_LIBRARY_PATH

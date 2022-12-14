@@ -1,0 +1,9 @@
+.. _api_record_raw:
+
+Raw Video 
+=========
+#include <dolbyio/comms/media_engine/media_engine.h>
+
+For details about Raw Video Recording an application must implement a :cpp:class:`Video Sink <dolbyio::comms::video_sink>` to receive the frames and provide this Video Sink to the SDK using the :cpp:class:`Remote Video Service <dolbyio::comms::services::remote_video>`.
+
+See :ref:`recording_example` for a template for child recording class for all possible media.

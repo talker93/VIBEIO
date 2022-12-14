@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C++ SDK 2.2.0 Documentation &mdash; C++ SDK 2.2.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Getting Started" href="other/getting_started.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="#" class="icon icon-home"> C++ SDK
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other/getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other/run_time_deps.html">Run Time Dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other/supported_platforms.html">Supported Platforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/coresdk.html">Core API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/media_io.html">Media IO API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/plugins.html">Plugins</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">C++ SDK</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+      <li>C++ SDK 2.2.0 Documentation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="c-sdk-release-documentation">
+<h1>C++ SDK 2.2.0 Documentation<a class="headerlink" href="#c-sdk-release-documentation" title="Permalink to this headline"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"></a></h2>
+<p>The Dolby.io Communications C++ SDK provides applications the ability to create high-quality voice and video for fully immersive real-time communications experiences. The C++ SDK allows creating an application that can join Dolby.io conferences.</p>
+<p>The C++ SDK is responsible for communicating with the Dolby.io backend and providing conferencing functionalities, such as opening and closing sessions, joining and leaving conferences, sending and receiving messages, as well as receiving and injecting WebRTC media streams.</p>
+<p>Currently, an instance of the C++ SDK can connect to only one conference at a time. Joining multiple conferences at a time requires running multiple instances of the application.</p>
+<section id="core-sdk">
+<h3>Core SDK<a class="headerlink" href="#core-sdk" title="Permalink to this headline"></a></h3>
+<p>The Core C++ SDK handles all of the signalling with the Dolby.io backend as well as providing various events, messages and other valuable information to users. The Dolby.io Communications C++ SDK allows joining
+Dolby Voice Conferences where participants can send and receive high-quality voice streams, including spatial audio and shared scenes. This functionality is useful for integrating the Dolby Voice experience
+into your own game engine or virtual world experience. The C++ SDK provides applications the ability to capture and playback audio and video, manage input and output audio devices and input video devices, add
+spatial placement for participants, as well as partake in a shared spatial scene.</p>
+<p>The Audio captured using the Core C++ SDK features is processed using Dolby Voice audio processing allowing for clear, crisp conversations without echo or background noise and provides the option to use Dolby’s world class 3D audio spatialization.</p>
+<p>The C++ SDK offers full control of the video capture pipeline to applications. For instance allowing developers to implement video filters and apply them to a user’s camera feed. As part of our documentation we provide
+<a class="reference internal" href="other/getting_started.html#cv-p-example"><span class="std std-ref">an example</span></a> of how this can be done.</p>
+</section>
+<section id="media-io">
+<h3>Media IO<a class="headerlink" href="#media-io" title="Permalink to this headline"></a></h3>
+<p>In addition to the Core features, the Dolby.io Communications C++ SDK also provides Media IO features. These include injecting audio from custom sources into conferences, connecting audio sinks to
+receive decoded PCM audio data and receiving encoded video frames before they are decoded. These features allow applications to connect as a client to a Dolby.io conference and record all of the present
+participants’ video and audio. Think of it as recording a conference on your own machine without needing to pay for recording minutes. Additionally you can inject some media from an external source (a file for instance) into the conference (especially applicable for Virtual Worlds for example). Note that using the Media IO features for Audio currently forces the use of the Opus Codec.</p>
+<p>To record conferences, the C++ SDK exposes incoming Audio and Video frames via the <a class="reference internal" href="api/recording/audio.html#_CPPv4N7dolbyio5comms10audio_sinkE" title="dolbyio::comms::audio_sink"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Audio</span> <span class="pre">Sink</span></code></a> and <a class="reference internal" href="api/sdk/video.html#_CPPv4N7dolbyio5comms10video_sinkE" title="dolbyio::comms::video_sink"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Video</span> <span class="pre">Sink</span></code></a>/<a class="reference internal" href="api/recording/encoded_video.html#_CPPv4N7dolbyio5comms18video_sink_encodedE" title="dolbyio::comms::video_sink_encoded"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Encoded</span> <span class="pre">Video</span> <span class="pre">Sink</span></code></a> interfaces. Applications can implement these interfaces themselves and use respective services to provide the recorders/injectors to the SDK.</p>
+</section>
+<section id="plugins">
+<h3>Plugins<a class="headerlink" href="#plugins" title="Permalink to this headline"></a></h3>
+<p>The C++ SDK also allows applications to make use of our ready-to-use <a class="reference internal" href="api/plugins.html#plugins-api"><span class="std std-ref">Plugins</span></a>. The C++ SDK provides a default media recorder plugin; a ready-to-use library that can be easily configured and included in an application. The plugin automatically records the incoming media streams for conference participants and stores the recorded streams in either raw or encoded format.</p>
+<p>The C++ SDK provides two default media injection plugins that are able to receive raw media frames and pass them to the SDK. One of the default plugins is the Pacing Injector. This injector exposes interfaces for an application to provide the
+injector with decoded audio and video frames. Then, the injector provides these frames into the SDK at specified intervals. The other default plugin is the Passthrough-Injector, which exposes interfaces for passing decoded audio/video
+frames that are directly provided to the SDK.</p>
+<section id="table-of-contents">
+<h4>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline"></a></h4>
+<div class="toctree-wrapper compound">
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other/getting_started.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="other/getting_started.html#contents-of-the-sdk-package">Contents of the SDK package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="other/getting_started.html#ca-certificates">CA certificates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="other/getting_started.html#getting-the-access-token">Getting the access token</a></li>
+<li class="toctree-l2"><a class="reference internal" href="other/getting_started.html#spatial-audio-conferences">Spatial audio conferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="other/getting_started.html#sample-application">Sample application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="other/getting_started.html#issues-linking">Issues Linking?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="other/run_time_deps.html">Run Time Dependencies</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="other/run_time_deps.html#macos-systems">MacOS Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="other/run_time_deps.html#windows-systems">Windows Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="other/run_time_deps.html#linux-systems">Linux Systems</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="other/supported_platforms.html">Supported Platforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/coresdk.html">Core API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/sdk/sdk.html">Sdk Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/sdk/session.html">Session Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/sdk/conference.html">Conference Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/sdk/audio.html">Audio Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/sdk/video.html">Video Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/sdk/device_management.html">Device Management Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/sdk/common/async_ops.html">Asynchronous Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/sdk/common/log_level.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/sdk/common/exception.html">SDK Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/sdk/common/event_handling.html">Event Handling Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/sdk/common/custom_allocator.html">Overriding new/delete operators</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/media_io.html">Media IO API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/media_io.html#injection">Injection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/media_io.html#recording">Recording</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/plugins.html">Plugins</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/sdk/recorder.html">Default Media Recorder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/sdk/injector.html">Default Media Injector</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="indices-and-tables">
+<h4>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline"></a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="other/getting_started.html" class="btn btn-neutral float-right" title="Getting Started" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Dolby Laboratories.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
