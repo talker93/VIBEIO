@@ -1,0 +1,13 @@
+Target dependency graph (5 targets)
+NewProject - Shared Code in NewProject, no dependencies
+NewProject - AU in NewProject, depends on:
+NewProject - Shared Code in NewProject (explicit)
+NewProject - VST3 in NewProject, depends on:
+NewProject - Shared Code in NewProject (explicit)
+NewProject - Standalone Plugin in NewProject, depends on:
+NewProject - Shared Code in NewProject (explicit)
+NewProject - All in NewProject, depends on:
+NewProject - VST3 in NewProject (explicit)
+NewProject - AU in NewProject (explicit)
+NewProject - Standalone Plugin in NewProject (explicit)
+NewProject - Shared Code in NewProject (explicit)
