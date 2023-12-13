@@ -1,0 +1,98 @@
+.. _api_conference:
+
+Conference Service
+==================
+.. note::
+  Features, such as recording and injecting media are only available for server applications.
+  
+The Conference Service allows the application to manage the conference life-cycle and interact with the conference. During a conference, the SDK may receive:
+
+ - A single audio stream that contains mixed audio of all un-muted participants
+ - Video streams from all participants who joined the conference with their cameras enabled
+ - One screen-share stream
+
+The basic usage of the Conference Service is as follows:
+  1) Log in to :ref:`sess_serv`.
+  2) Subscribe to any of the available :ref:`conf_events` using the :cpp:func:`conference::add_event_handler <dolbyio::comms::services::conference::add_event_handler>` method.
+  3) Create a conference using a conference alias :cpp:func:`conference::create <dolbyio::comms::services::conference::create>`. You can omit this step if you want to join an existing conference.
+  4) Join a conference using the :cpp:func:`conference::join <dolbyio::comms::services::conference::join>` or :cpp:func:`conference::listen <dolbyio::comms::services::conference::listen>` method. This method returns the conference_info structure (see :ref:`conf_models`) describing the conference. In the case of failure, you will receive an exception returned in the async_result.
+  5) To leave the conference, call the :cpp:func:`conference::leave <dolbyio::comms::services::conference::leave>` method.
+  
+.. _conf_serv:
+
+Conference Interface
+--------------------------
+#include <dolbyio/comms/conference.h>
+
+The interface for the :ref:`api_conference`. Methods of this interface provide the ability to create, join, and leave conferences and subscribe to
+events. The conference service methods are all asynchronous in nature, refer to :ref:`api_async_result` for more information. Structures which are part of the
+interface can be passed to and returned by the service.
+
+.. doxygenclass:: dolbyio::comms::services::conference
+
+Spatial Audio
+-------------
+#include <dolbyio/comms/spatial_audio_types.h>
+
+The spatial audio methods that allow placing conference participants spatially in a 3D rendered audio scene and hear the audio from the participants rendered at the given locations.
+
+.. doxygenstruct:: dolbyio::comms::spatial_position
+
+.. doxygenstruct:: dolbyio::comms::polar_position
+
+.. doxygenstruct:: dolbyio::comms::spatial_direction
+
+.. doxygenstruct:: dolbyio::comms::spatial_scale
+
+.. doxygenclass:: dolbyio::comms::spatial_audio_batch_update
+
+.. doxygenenum:: dolbyio::comms::spatial_audio_style
+
+.. _conf_events:
+
+Conference Events
+-----------------
+The :ref:`api_conference` events that are emitted by the SDK. You can subscribe to the events using the :cpp:func:`conference::add_event_handler <dolbyio::comms::services::conference::add_event_handler>` methods. 
+
+.. doxygenstruct:: dolbyio::comms::active_speaker_change
+        :project: C++ SDK
+
+.. doxygenstruct:: dolbyio::comms::conference_status_updated
+        :project: C++ SDK
+
+.. doxygenstruct:: dolbyio::comms::participant_added
+        :project: C++ SDK
+
+.. doxygenstruct:: dolbyio::comms::participant_updated
+        :project: C++ SDK
+
+.. doxygenstruct:: dolbyio::comms::video_track_added
+        :project: C++ SDK
+
+.. doxygenstruct:: dolbyio::comms::video_track_removed
+        :project: C++ SDK
+
+.. doxygenstruct:: dolbyio::comms::audio_track_added
+        :project: C++ SDK
+
+.. doxygenstruct:: dolbyio::comms::audio_track_removed
+        :project: C++ SDK
+
+
+.. _conf_models:
+
+Other Structures
+----------------
+Other structures used by the :ref:`api_conference`, which are not defined in the :ref:`conf_serv` interface.
+
+.. doxygenstruct:: dolbyio::comms::conference_info
+        :project: C++ SDK
+
+.. doxygenstruct:: dolbyio::comms::participant_info
+        :project: C++ SDK
+
+.. doxygenenum:: dolbyio::comms::participant_status
+        :project: C++ SDK
+
+.. doxygenenum:: dolbyio::comms::participant_type
+        :project: C++ SDK

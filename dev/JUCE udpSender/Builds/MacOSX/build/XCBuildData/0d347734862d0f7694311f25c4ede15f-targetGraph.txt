@@ -1,0 +1,4 @@
+Target dependency graph (2 targets)
+shan1102 - Shared Code in shan1102, no dependencies
+shan1102 - AU in shan1102, depends on:
+shan1102 - Shared Code in shan1102 (explicit)

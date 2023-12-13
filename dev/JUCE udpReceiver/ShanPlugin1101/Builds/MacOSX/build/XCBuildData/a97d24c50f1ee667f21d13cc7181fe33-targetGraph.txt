@@ -1,0 +1,13 @@
+Target dependency graph (5 targets)
+ShanPlugin1101 - Shared Code in ShanPlugin1101, no dependencies
+ShanPlugin1101 - AU in ShanPlugin1101, depends on:
+ShanPlugin1101 - Shared Code in ShanPlugin1101 (explicit)
+ShanPlugin1101 - VST3 in ShanPlugin1101, depends on:
+ShanPlugin1101 - Shared Code in ShanPlugin1101 (explicit)
+ShanPlugin1101 - Standalone Plugin in ShanPlugin1101, depends on:
+ShanPlugin1101 - Shared Code in ShanPlugin1101 (explicit)
+ShanPlugin1101 - All in ShanPlugin1101, depends on:
+ShanPlugin1101 - VST3 in ShanPlugin1101 (explicit)
+ShanPlugin1101 - AU in ShanPlugin1101 (explicit)
+ShanPlugin1101 - Standalone Plugin in ShanPlugin1101 (explicit)
+ShanPlugin1101 - Shared Code in ShanPlugin1101 (explicit)

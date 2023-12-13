@@ -1,0 +1,29 @@
+.. _recording_example:
+
+Example Recorder Implementation
+===============================
+Below are the header and cpp files for a Media Recorder Implementation, in order for this recorder to be used by the C++ SDK it must be passed to the conference service as
+using the :cpp:class:`dolbyio::comms::services::media_io`. Now when a conference is joined all incoming media will be passed to the recorder implementation.
+
+The recorder should be configured appropriately to be used for handling encoded or raw video and PCM/AAC audio. The application should set this configuration before passing the recorder implementation
+to the conference service.
+
+The interfaces inheritted from by this custom_recorder example must be implemented by any custom recorder which wishes to receive video and audio frames.
+
+At the bottom of the page is a sample CMakeLists.txt which shows how to create a library for this custom recorder, then the library can be linked against the executable shown in the 
+ :ref:`getting_started_sample` section if you want to use a custom recorder module.
+
+custom_recorder.h
+_________________
+.. literalinclude:: ../../../src/public/dolbyio/comms/sample/custom_recorder/custom_recorder.h
+  :language: c++
+
+custom_recorder.cc
+__________________
+.. literalinclude:: ../../../src/public/dolbyio/comms/sample/custom_recorder/custom_recorder.cc
+  :language: c++
+
+CMakeLists.txt
+_______________
+.. literalinclude:: ../../../src/public/dolbyio/comms/sample/custom_recorder/CMakeLists.txt
+  :language: console

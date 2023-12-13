@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="NexusUI.js"></script>
+    <title>Codec Demo</title>
+  </head>
+  <body>
+    <!-- <div id="app"></div> -->
+    
+    <div>
+      <h2>Step 1: initialize your device</h2>
+      <h3>Local Stream Setting</h3>
+
+      <div class="select">
+        <div id="muteMo" style="display: inline-block"></div>
+          <input type="checkbox" id="muteMonitor" style="display: none" value="yes" checked="true">
+          <label>Mute Monitoring Signal</label>
+      </div>
+      <div class="select">
+        <div  id="muteMy" style="display:inline-block"></div>
+        <input type="checkbox" id="muteMe" style="display: none" value="yes" checked="true">
+        <label>Mute Myself</label>
+      </div>
+      <div class="select">
+        <label>Audio input source: </label>
+        <select id="audioSource"></select>
+        <div id="audioSourceSelect" style="display:none"></div>
+      </div>
+      <!-- <div class="label">Local Audio player</div> -->
+      <div style = "display:none">
+        <br>
+        <audio id="webcamVideo"  controls></audio>
+      </div>
+      <h3>Remote Stream Setting</h3>
+      <div class="select">
+        <label>Audio output destination: </label>
+        <select id="audioOutput"></select>
+        <div id="audioOutputSelect" style="display:none"></div>
+      </div>
+      <!-- <div class="label">Remote Audio Player</div> -->
+      <div style = "display:none">
+        <audio id="remoteVideo"  controls></audio>
+      </div>
+      <br>
+      <div id="startDevices" style="display:inline-block"></div>
+      <button id="webcamButton" style="display:none">Start Devices</button>
+    </div>
+
+    <div>
+      <h2>Step 2: create or join a call</h2>
+      <button id="callButton" disabled>Create Call</button>
+      <input id="callInput">
+      <button id="answerButton" disabled>Answer</button>
+    </div>
+    <div id="callMessage"></div>
+
+    <!-- hangup is hidden until being deployed to real app-->
+    <div style = "display: none;">
+      <h2>Step 3: Hangup</h2>
+      <button id="hangupButton" disabled>Hangup</button>
+    </div>
+
+    <div>
+      <h2>Step 3: Apply FX</h2>
+      <div>
+        <h3>Compressor</h3>
+        <div id="comp_bypass">Bypass</div>
+        <div id="comp_bypass_val"></div>
+        <div id="comp_threshold">Threshold</div>
+        <div id="comp_threshold_val"></div>
+        <div id="comp_knee">Knee</div>
+        <div id="comp_knee_val"></div>
+        <div id="comp_ratio">Ratio</div>
+        <div id="comp_ratio_val"></div>
+        <div id="comp_attack">Attack</div>
+        <div id="comp_attack_val"></div>
+        <div id="comp_release">Release</div>
+        <div id="comp_release_val"></div>
+      </div>
+      <div>
+        <h3>Reverb</h3>
+        <div id="rev_bypass">Bypass</div>
+        <div id="rev_type">Reverb Type</div>
+        <div id="rev_mix">Dry/Wet</div>
+      </div>
+      <div>
+        <h3>EQ</h3>
+        <div id="eq_bypass">Bypass</div>
+        <div id="eq_type">Filter Type</div>
+        <div id="eq_freq">Filter Freq</div>
+        <div id="eq1">LowFreq</div>
+        <div id="eq2">MidFreq</div>
+        <div id="eq3">HighFreq</div>
+      </div>
+      <div>
+        <h3>Gain</h3>
+        <div id="gain_bypass">Bypass</div>
+        <div id="gain"></div>
+      </div>
+      <div>
+        <h3>Pan</h3>
+        <div id="pan_bypass">Bypass</div>
+        <div id="pan"></div>
+      </div>
+      <h3>Oscilloscope</h3>
+      <div id="oScope"></div>
+      <h3>Spectrogram</h3>
+      <div id="spec"></div>
+    </div>
+
+
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

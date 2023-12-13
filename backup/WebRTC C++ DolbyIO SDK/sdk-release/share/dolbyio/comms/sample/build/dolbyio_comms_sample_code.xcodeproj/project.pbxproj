@@ -1,0 +1,2181 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		4E4D96F9B29C4D4BAD71712D /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = F3FA8DB22A3D4960B119EE8B /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				FECCFF35A1DF3C73B46C612B /* Generate CMakeFiles/ALL_BUILD */,
+			);
+			dependencies = (
+				BA4844768C574E8AA4C2C716 /* PBXTargetDependency */,
+				7884C6B520464FF5ACA6A56E /* PBXTargetDependency */,
+				A7509CF6172C4F0BAF9C12A6 /* PBXTargetDependency */,
+				CCB1B36EF2714E238AB60471 /* PBXTargetDependency */,
+				A24F6E4B081A478894BB263B /* PBXTargetDependency */,
+				A15D6D3B84D441F9B3D4226D /* PBXTargetDependency */,
+				4D74BB1189F94EFAB385C782 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		885DF81B10084477B31DAE70 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 573E33C0E705470DABEE0476 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				997B64AEA6307FE3E7037108 /* Generate CMakeFiles/ZERO_CHECK */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		115177BD1DF64F678DCA71F6 /* custom_injector.cc in Sources */ = {isa = PBXBuildFile; fileRef = F92015331931443A8FCE16D7 /* custom_injector.cc */; };
+		502FDDAFE7C2470BAC99729B /* frame.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7CBE5A885143433E9B91C324 /* frame.cc */; };
+		76F78D540BEA49E1AEF720A4 /* desktop_app.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2F28FC12ED2F4D1893F1DEE3 /* desktop_app.cc */; };
+		7B533F03F939432F911B6750 /* interactions.cc in Sources */ = {isa = PBXBuildFile; fileRef = 555689EB0A034E4FA71AE837 /* interactions.cc */; };
+		9F50F420F3D144378D020F0B /* decoder.cc in Sources */ = {isa = PBXBuildFile; fileRef = 53D9FA718CE9493CA39A6DEB /* decoder.cc */; };
+		B0086762982745E397E34EED /* interactions.cc in Sources */ = {isa = PBXBuildFile; fileRef = 171234ADC70E4BA9BD337795 /* interactions.cc */; };
+		B1DAF208875B4936ADDEF992 /* avcontext.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7C3FA2BAAEA94185892F3758 /* avcontext.cc */; };
+		B6724EFEB0C644B48E993E76 /* media_frame.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7F7673B871E74A8CA4BF6B47 /* media_frame.cc */; };
+		B68273E0542F4F86B5ACA878 /* custom_video_processor.cc in Sources */ = {isa = PBXBuildFile; fileRef = 266C7D9BC1D04891A2E4AB00 /* custom_video_processor.cc */; };
+		B6F07B54E2814800953BDE7F /* audio_buffer.cc in Sources */ = {isa = PBXBuildFile; fileRef = 38B034FE35C14B0C8AA9A22D /* audio_buffer.cc */; };
+		BD5EA82967064C21BECF4B67 /* commands_handler.cc in Sources */ = {isa = PBXBuildFile; fileRef = 65A9A1BA30A6409A96871CB0 /* commands_handler.cc */; };
+		C386E252218E443FB08BA7E8 /* events.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3C78A91C4B4947BEAE1FD4B8 /* events.cc */; };
+		C80542F3348B4100B8453244 /* custom_recorder.cc in Sources */ = {isa = PBXBuildFile; fileRef = FE07A96FD84044BB8F8C8BA9 /* custom_recorder.cc */; };
+		D8B178A2CA9B402D804D7F26 /* macos_ui.mm in Sources */ = {isa = PBXBuildFile; fileRef = D327524F8D7646139B50766E /* macos_ui.mm */; };
+		DB56F7D90A1B44EB9C30B6D7 /* media_io_interactions.cc in Sources */ = {isa = PBXBuildFile; fileRef = 39FFBC6C1F444BFA8C6C3B46 /* media_io_interactions.cc */; };
+		E1AD17E1FBFC47749CBBFB19 /* source_capture.cc in Sources */ = {isa = PBXBuildFile; fileRef = 15DB23DF642C4F59A576EB79 /* source_capture.cc */; };
+		F6564A87B88E49A88A17BB24 /* ui.cc in Sources */ = {isa = PBXBuildFile; fileRef = 5B1CB0FA0FEC4A5DBD90C42A /* ui.cc */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		03B3F5D9CF0C4145AC645879 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAC5AA9412F14659A4B3F6AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8EC3865933074265B604BD27;
+			remoteInfo = custom_video_processor;
+		};
+		1461E100DF5F45B78E4C43E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAC5AA9412F14659A4B3F6AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 91C5FD90773D4F0C87BF18B0;
+			remoteInfo = desktop_app;
+		};
+		1FA99183EF734C1E9FCAE239 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAC5AA9412F14659A4B3F6AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 885DF81B10084477B31DAE70;
+			remoteInfo = ZERO_CHECK;
+		};
+		3938EE5BE9F247F3A0EED773 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAC5AA9412F14659A4B3F6AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 379C1B31BDD145419F20BE09;
+			remoteInfo = media_source_file;
+		};
+		49E281968F84458D94F93971 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAC5AA9412F14659A4B3F6AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 48096AE7D6EC464AAC96D2D3;
+			remoteInfo = custom_recorder;
+		};
+		58496C7368574FDAADC70683 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAC5AA9412F14659A4B3F6AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6294063369BE455FBBC64E85;
+			remoteInfo = utils;
+		};
+		60F72D80B3A149D2B3BED567 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAC5AA9412F14659A4B3F6AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 379C1B31BDD145419F20BE09;
+			remoteInfo = media_source_file;
+		};
+		6DC88A02CD9F49F289139D6A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAC5AA9412F14659A4B3F6AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 885DF81B10084477B31DAE70;
+			remoteInfo = ZERO_CHECK;
+		};
+		882E9374460D444F97C99C60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAC5AA9412F14659A4B3F6AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 885DF81B10084477B31DAE70;
+			remoteInfo = ZERO_CHECK;
+		};
+		97D241D2AB484CB7B331EAA2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAC5AA9412F14659A4B3F6AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 885DF81B10084477B31DAE70;
+			remoteInfo = ZERO_CHECK;
+		};
+		9D31D3D1D2624CB6B378E941 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAC5AA9412F14659A4B3F6AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 885DF81B10084477B31DAE70;
+			remoteInfo = ZERO_CHECK;
+		};
+		CBE6A624AFEE408E86297DBD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAC5AA9412F14659A4B3F6AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6294063369BE455FBBC64E85;
+			remoteInfo = utils;
+		};
+		ECC18084BDA849EDB092E281 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAC5AA9412F14659A4B3F6AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 31B7CE673FE849E38B948BA9;
+			remoteInfo = custom_injector;
+		};
+		F9D1A1AE0E8B4D8B882C0F20 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAC5AA9412F14659A4B3F6AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 379C1B31BDD145419F20BE09;
+			remoteInfo = media_source_file;
+		};
+		FA8C5F70A99E40EA9FB8B55B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAC5AA9412F14659A4B3F6AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 885DF81B10084477B31DAE70;
+			remoteInfo = ZERO_CHECK;
+		};
+		FE86BC50EDF04508B4930D6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAC5AA9412F14659A4B3F6AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 885DF81B10084477B31DAE70;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		08A205A38B3B471BB97E5180 /* interactions.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = interactions.h; path = utilities/sdk/device_manager/interactions.h; sourceTree = SOURCE_ROOT; };
+		0F333CB523F844359525B1A2 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = custom_video_processor/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		13D5CB9FD432491199E36D1B /* interactor.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = interactor.h; path = utilities/interactor.h; sourceTree = SOURCE_ROOT; };
+		15DB23DF642C4F59A576EB79 /* source_capture.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = source_capture.cc; path = media_source/file/source_capture.cc; sourceTree = SOURCE_ROOT; };
+		171234ADC70E4BA9BD337795 /* interactions.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = interactions.cc; path = utilities/sdk/interactions.cc; sourceTree = SOURCE_ROOT; };
+		1B81FEC30F7E48ADB9C3CFD6 /* source_capture.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = source_capture.h; path = media_source/file/source_capture.h; sourceTree = SOURCE_ROOT; };
+		21AEC9F8846A448D8D07593B /* custom_recorder.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = custom_recorder.h; path = custom_recorder/custom_recorder.h; sourceTree = SOURCE_ROOT; };
+		21CB1F5377054DC7837E1FB8 /* custom_video_processor.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = custom_video_processor.h; path = custom_video_processor/custom_video_processor.h; sourceTree = SOURCE_ROOT; };
+		266C7D9BC1D04891A2E4AB00 /* custom_video_processor.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = custom_video_processor.cc; path = custom_video_processor/custom_video_processor.cc; sourceTree = SOURCE_ROOT; };
+		2A1DDD664B7E45AEB4A68538 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = custom_recorder/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		2F28FC12ED2F4D1893F1DEE3 /* desktop_app.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = desktop_app.cc; path = desktop_app/desktop_app.cc; sourceTree = SOURCE_ROOT; };
+		2F578FB2CAF44D9C848327BA /* media_frame.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = media_frame.h; path = media_source/file/utils/media_frame.h; sourceTree = SOURCE_ROOT; };
+		3284A50F2C7047919E3ECCA5 /* ui.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ui.h; path = utilities/ui_loop/ui.h; sourceTree = SOURCE_ROOT; };
+		33F1D2C6C23A486292307BE5 /* media_io_interactions.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = media_io_interactions.h; path = utilities/media/media_io_interactions.h; sourceTree = SOURCE_ROOT; };
+		374327278E3C4AF5A7BC0DA5 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = custom_injector/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		38B034FE35C14B0C8AA9A22D /* audio_buffer.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = audio_buffer.cc; path = media_source/file/utils/audio_buffer.cc; sourceTree = SOURCE_ROOT; };
+		39FFBC6C1F444BFA8C6C3B46 /* media_io_interactions.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = media_io_interactions.cc; path = utilities/media/media_io_interactions.cc; sourceTree = SOURCE_ROOT; };
+		3C78A91C4B4947BEAE1FD4B8 /* events.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = events.cc; path = utilities/sdk/events.cc; sourceTree = SOURCE_ROOT; };
+		3E578220447A426C9199F89A /* frame.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = frame.h; path = media_source/file/libav_wrapper/frame.h; sourceTree = SOURCE_ROOT; };
+		53D9FA718CE9493CA39A6DEB /* decoder.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = decoder.cc; path = media_source/file/libav_wrapper/decoder.cc; sourceTree = SOURCE_ROOT; };
+		555689EB0A034E4FA71AE837 /* interactions.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = interactions.cc; path = utilities/sdk/device_manager/interactions.cc; sourceTree = SOURCE_ROOT; };
+		5B1CB0FA0FEC4A5DBD90C42A /* ui.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ui.cc; path = utilities/ui_loop/ui.cc; sourceTree = SOURCE_ROOT; };
+		65A9A1BA30A6409A96871CB0 /* commands_handler.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = commands_handler.cc; path = utilities/commands_handler.cc; sourceTree = SOURCE_ROOT; };
+		6AF057677AF54BCC97D56AFF /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = desktop_app/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		708787C093284683B955496E /* macos_ui.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = macos_ui.h; path = utilities/ui_loop/macos_ui.h; sourceTree = SOURCE_ROOT; };
+		70A6ACE51E704CFC8A88CCC3 /* libutils.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libutils.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		75FFB4FD06D343029734EC32 /* interactions.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = interactions.h; path = utilities/sdk/interactions.h; sourceTree = SOURCE_ROOT; };
+		762F2E3120374DB2B2A4695E /* libcustom_video_processor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libcustom_video_processor.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		77BDB7EF4B0F495C93C369FF /* decoder.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = decoder.h; path = media_source/file/libav_wrapper/decoder.h; sourceTree = SOURCE_ROOT; };
+		7C3FA2BAAEA94185892F3758 /* avcontext.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = avcontext.cc; path = media_source/file/libav_wrapper/avcontext.cc; sourceTree = SOURCE_ROOT; };
+		7CBE5A885143433E9B91C324 /* frame.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = frame.cc; path = media_source/file/libav_wrapper/frame.cc; sourceTree = SOURCE_ROOT; };
+		7F7673B871E74A8CA4BF6B47 /* media_frame.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = media_frame.cc; path = media_source/file/utils/media_frame.cc; sourceTree = SOURCE_ROOT; };
+		899581BE05424A229E667F2D /* custom_injector.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = custom_injector.h; path = custom_injector/custom_injector.h; sourceTree = SOURCE_ROOT; };
+		89CEC27E02AD4E82A758BF99 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		9594A065F50A4C9AB29C16A9 /* audio_buffer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = audio_buffer.h; path = media_source/file/utils/audio_buffer.h; sourceTree = SOURCE_ROOT; };
+		99DE87217F0F4C07A3EF2251 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = utilities/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		9A8C24802937AD55002C9A9E /* AudioFileIf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AudioFileIf.h; path = media_source/file/utils/AudioFileIf.h; sourceTree = "<group>"; };
+		9E93CE49F35C467084A080D5 /* events.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = events.h; path = utilities/sdk/events.h; sourceTree = SOURCE_ROOT; };
+		A1F79F9E946A453F8ECE2D14 /* libcustom_injector.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libcustom_injector.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3FDD14AEFAA4FD18B4C1CA5 /* commands_handler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = commands_handler.h; path = utilities/commands_handler.h; sourceTree = SOURCE_ROOT; };
+		B49E424009DF443DBDEA97EC /* libmedia_source_file.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libmedia_source_file.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAF94D5968B7480990D28CFA /* frame_pool.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = frame_pool.h; path = media_source/file/utils/frame_pool.h; sourceTree = SOURCE_ROOT; };
+		C572A352B41C47E38BC8C6CE /* desktop_app */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = desktop_app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D30BCDA5917940A991A46B84 /* avcontext.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = avcontext.h; path = media_source/file/libav_wrapper/avcontext.h; sourceTree = SOURCE_ROOT; };
+		D327524F8D7646139B50766E /* macos_ui.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = macos_ui.mm; path = utilities/ui_loop/macos_ui.mm; sourceTree = SOURCE_ROOT; };
+		D3309F26894C45F0BA923B25 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = media_source/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		F58DD88D9A944340BDDA5830 /* libcustom_recorder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libcustom_recorder.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F92015331931443A8FCE16D7 /* custom_injector.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = custom_injector.cc; path = custom_injector/custom_injector.cc; sourceTree = SOURCE_ROOT; };
+		FA4B7A60191C4CC4B8F692CB /* source_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = source_context.h; path = media_source/file/source_context.h; sourceTree = SOURCE_ROOT; };
+		FE07A96FD84044BB8F8C8BA9 /* custom_recorder.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = custom_recorder.cc; path = custom_recorder/custom_recorder.cc; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0A954EF699634E03BAA8D10B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13958B28547440BA88FE7518 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F5CF4FB5279442A9CE83946 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80984747DD084198A6A0CB4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A77D767CD8D1471D8ACA01BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B04FFFE5F8664CB3AE01B584 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		036A626E6AF9433E932F3FF9 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				24385E72AC4146049D1374F5 /* CMake Rules */,
+				89CEC27E02AD4E82A758BF99 /* CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		03984833A9654813959E1DFB /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				21CB1F5377054DC7837E1FB8 /* custom_video_processor.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		0D0F2FF6FEE440AAAF63846B /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				899581BE05424A229E667F2D /* custom_injector.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		1FA19E9C7C984F2C9CFDEBCB /* custom_recorder */ = {
+			isa = PBXGroup;
+			children = (
+				835B70F3891E42E78914403E /* Header Files */,
+				99A0440B9012485587DD8D95 /* Source Files */,
+				2A1DDD664B7E45AEB4A68538 /* CMakeLists.txt */,
+			);
+			name = custom_recorder;
+			sourceTree = "<group>";
+		};
+		24385E72AC4146049D1374F5 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		2C48BD735B5640E4BBAAFCD4 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				7C3FA2BAAEA94185892F3758 /* avcontext.cc */,
+				53D9FA718CE9493CA39A6DEB /* decoder.cc */,
+				7CBE5A885143433E9B91C324 /* frame.cc */,
+				15DB23DF642C4F59A576EB79 /* source_capture.cc */,
+				38B034FE35C14B0C8AA9A22D /* audio_buffer.cc */,
+				7F7673B871E74A8CA4BF6B47 /* media_frame.cc */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		2D1F462D0D2F4E3B9BBE3ECF /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				F92015331931443A8FCE16D7 /* custom_injector.cc */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		447ACA364CF7482F8381CB7F /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				D30BCDA5917940A991A46B84 /* avcontext.h */,
+				77BDB7EF4B0F495C93C369FF /* decoder.h */,
+				3E578220447A426C9199F89A /* frame.h */,
+				1B81FEC30F7E48ADB9C3CFD6 /* source_capture.h */,
+				FA4B7A60191C4CC4B8F692CB /* source_context.h */,
+				9594A065F50A4C9AB29C16A9 /* audio_buffer.h */,
+				BAF94D5968B7480990D28CFA /* frame_pool.h */,
+				9A8C24802937AD55002C9A9E /* AudioFileIf.h */,
+				2F578FB2CAF44D9C848327BA /* media_frame.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		503C4CFB8DB74ED487F922D8 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				A3FDD14AEFAA4FD18B4C1CA5 /* commands_handler.h */,
+				13D5CB9FD432491199E36D1B /* interactor.h */,
+				33F1D2C6C23A486292307BE5 /* media_io_interactions.h */,
+				08A205A38B3B471BB97E5180 /* interactions.h */,
+				9E93CE49F35C467084A080D5 /* events.h */,
+				75FFB4FD06D343029734EC32 /* interactions.h */,
+				708787C093284683B955496E /* macos_ui.h */,
+				3284A50F2C7047919E3ECCA5 /* ui.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		5C309E4D11F74CAC908B9DEF /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				65A9A1BA30A6409A96871CB0 /* commands_handler.cc */,
+				39FFBC6C1F444BFA8C6C3B46 /* media_io_interactions.cc */,
+				555689EB0A034E4FA71AE837 /* interactions.cc */,
+				3C78A91C4B4947BEAE1FD4B8 /* events.cc */,
+				171234ADC70E4BA9BD337795 /* interactions.cc */,
+				D327524F8D7646139B50766E /* macos_ui.mm */,
+				5B1CB0FA0FEC4A5DBD90C42A /* ui.cc */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		835B70F3891E42E78914403E /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				21AEC9F8846A448D8D07593B /* custom_recorder.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		9105CA30B7EA41008EFD0E90 /* desktop_app */ = {
+			isa = PBXGroup;
+			children = (
+				924BC1EB60774BE0AF32EC04 /* Source Files */,
+				6AF057677AF54BCC97D56AFF /* CMakeLists.txt */,
+			);
+			name = desktop_app;
+			sourceTree = "<group>";
+		};
+		924BC1EB60774BE0AF32EC04 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				2F28FC12ED2F4D1893F1DEE3 /* desktop_app.cc */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		99A0440B9012485587DD8D95 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE07A96FD84044BB8F8C8BA9 /* custom_recorder.cc */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		9A5C4D506543452190CC4BB6 = {
+			isa = PBXGroup;
+			children = (
+				036A626E6AF9433E932F3FF9 /* ALL_BUILD */,
+				FD883A4800CF4D8B86A19AD5 /* custom_injector */,
+				1FA19E9C7C984F2C9CFDEBCB /* custom_recorder */,
+				C7320EE4E90F4AE88D70A197 /* custom_video_processor */,
+				D4691A4219DD41AD982935CB /* media_source_file */,
+				9105CA30B7EA41008EFD0E90 /* desktop_app */,
+				C30D7E5EE4AB48769678B4E3 /* utils */,
+				D85918CA77B2453EB78F9119 /* Products */,
+				ED2162C18FA948268F1F1D02 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C22C8DC971D24FBC97E2F2F3 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				266C7D9BC1D04891A2E4AB00 /* custom_video_processor.cc */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		C30D7E5EE4AB48769678B4E3 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				503C4CFB8DB74ED487F922D8 /* Header Files */,
+				5C309E4D11F74CAC908B9DEF /* Source Files */,
+				99DE87217F0F4C07A3EF2251 /* CMakeLists.txt */,
+			);
+			name = utils;
+			sourceTree = "<group>";
+		};
+		C7320EE4E90F4AE88D70A197 /* custom_video_processor */ = {
+			isa = PBXGroup;
+			children = (
+				03984833A9654813959E1DFB /* Header Files */,
+				C22C8DC971D24FBC97E2F2F3 /* Source Files */,
+				0F333CB523F844359525B1A2 /* CMakeLists.txt */,
+			);
+			name = custom_video_processor;
+			sourceTree = "<group>";
+		};
+		D4691A4219DD41AD982935CB /* media_source_file */ = {
+			isa = PBXGroup;
+			children = (
+				447ACA364CF7482F8381CB7F /* Header Files */,
+				2C48BD735B5640E4BBAAFCD4 /* Source Files */,
+				D3309F26894C45F0BA923B25 /* CMakeLists.txt */,
+			);
+			name = media_source_file;
+			sourceTree = "<group>";
+		};
+		D85918CA77B2453EB78F9119 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A1F79F9E946A453F8ECE2D14 /* libcustom_injector.a */,
+				F58DD88D9A944340BDDA5830 /* libcustom_recorder.a */,
+				762F2E3120374DB2B2A4695E /* libcustom_video_processor.a */,
+				C572A352B41C47E38BC8C6CE /* desktop_app */,
+				B49E424009DF443DBDEA97EC /* libmedia_source_file.a */,
+				70A6ACE51E704CFC8A88CCC3 /* libutils.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED2162C18FA948268F1F1D02 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FD883A4800CF4D8B86A19AD5 /* custom_injector */ = {
+			isa = PBXGroup;
+			children = (
+				0D0F2FF6FEE440AAAF63846B /* Header Files */,
+				2D1F462D0D2F4E3B9BBE3ECF /* Source Files */,
+				374327278E3C4AF5A7BC0DA5 /* CMakeLists.txt */,
+			);
+			name = custom_injector;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		31B7CE673FE849E38B948BA9 /* custom_injector */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 009E9FBFA353452B99B44FD1 /* Build configuration list for PBXNativeTarget "custom_injector" */;
+			buildPhases = (
+				6780143B6459425B96C9C31A /* Sources */,
+				13958B28547440BA88FE7518 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				311CE805D71844D388F2A33E /* PBXTargetDependency */,
+			);
+			name = custom_injector;
+			productName = custom_injector;
+			productReference = A1F79F9E946A453F8ECE2D14 /* libcustom_injector.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		379C1B31BDD145419F20BE09 /* media_source_file */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 459492E5E2934F17BEDEDD03 /* Build configuration list for PBXNativeTarget "media_source_file" */;
+			buildPhases = (
+				257418A7537D4E98A70FC326 /* Sources */,
+				A77D767CD8D1471D8ACA01BB /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				427CCCDCD1F74171A0360CDC /* PBXTargetDependency */,
+			);
+			name = media_source_file;
+			productName = media_source_file;
+			productReference = B49E424009DF443DBDEA97EC /* libmedia_source_file.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		48096AE7D6EC464AAC96D2D3 /* custom_recorder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDCE9454710345DC8E2B1BEA /* Build configuration list for PBXNativeTarget "custom_recorder" */;
+			buildPhases = (
+				2BE70450ED424E28AB6751E7 /* Sources */,
+				3F5CF4FB5279442A9CE83946 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7952559AB1CA4BD1B51A69BC /* PBXTargetDependency */,
+			);
+			name = custom_recorder;
+			productName = custom_recorder;
+			productReference = F58DD88D9A944340BDDA5830 /* libcustom_recorder.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		6294063369BE455FBBC64E85 /* utils */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35AF86CECAAE4E41B9422B8E /* Build configuration list for PBXNativeTarget "utils" */;
+			buildPhases = (
+				9B545864D59A4875B828FCB6 /* Sources */,
+				80984747DD084198A6A0CB4D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				103F0A97482748AF8EB4992D /* PBXTargetDependency */,
+				8B343E0543584103A1105B65 /* PBXTargetDependency */,
+			);
+			name = utils;
+			productName = utils;
+			productReference = 70A6ACE51E704CFC8A88CCC3 /* libutils.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		8EC3865933074265B604BD27 /* custom_video_processor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CBD4FA2809642E8BDEDDB66 /* Build configuration list for PBXNativeTarget "custom_video_processor" */;
+			buildPhases = (
+				D1286A88BA7B4E36AD1DFFE0 /* Sources */,
+				0A954EF699634E03BAA8D10B /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				040C852904554A4395A33653 /* PBXTargetDependency */,
+			);
+			name = custom_video_processor;
+			productName = custom_video_processor;
+			productReference = 762F2E3120374DB2B2A4695E /* libcustom_video_processor.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		91C5FD90773D4F0C87BF18B0 /* desktop_app */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D7F5F0C9F3C4A95A017D56E /* Build configuration list for PBXNativeTarget "desktop_app" */;
+			buildPhases = (
+				2A4AD33E0AAC4CEE83E2321C /* Sources */,
+				B04FFFE5F8664CB3AE01B584 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D6E508B93D4346F592895DC3 /* PBXTargetDependency */,
+				BD70D15205964250874197F2 /* PBXTargetDependency */,
+				B221EF469F6A47289116B554 /* PBXTargetDependency */,
+			);
+			name = desktop_app;
+			productName = desktop_app;
+			productReference = C572A352B41C47E38BC8C6CE /* desktop_app */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AAC5AA9412F14659A4B3F6AD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1320;
+			};
+			buildConfigurationList = 35E6A2C9C14F4A048F9673CC /* Build configuration list for PBXProject "dolbyio_comms_sample_code" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9A5C4D506543452190CC4BB6;
+			projectDirPath = ../;
+			projectRoot = "";
+			targets = (
+				4E4D96F9B29C4D4BAD71712D /* ALL_BUILD */,
+				885DF81B10084477B31DAE70 /* ZERO_CHECK */,
+				31B7CE673FE849E38B948BA9 /* custom_injector */,
+				48096AE7D6EC464AAC96D2D3 /* custom_recorder */,
+				8EC3865933074265B604BD27 /* custom_video_processor */,
+				91C5FD90773D4F0C87BF18B0 /* desktop_app */,
+				379C1B31BDD145419F20BE09 /* media_source_file */,
+				6294063369BE455FBBC64E85 /* utils */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		997B64AEA6307FE3E7037108 /* Generate CMakeFiles/ZERO_CHECK */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ZERO_CHECK";
+			outputPaths = (
+				"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/CMakeFiles/ZERO_CHECK",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nif test \"$CONFIGURATION\" = \"Debug\"; then :\n  cd /Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build\n  make -f /Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/CMakeScripts/ReRunCMake.make\nfi\nif test \"$CONFIGURATION\" = \"Release\"; then :\n  cd /Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build\n  make -f /Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/CMakeScripts/ReRunCMake.make\nfi\nif test \"$CONFIGURATION\" = \"MinSizeRel\"; then :\n  cd /Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build\n  make -f /Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/CMakeScripts/ReRunCMake.make\nfi\nif test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :\n  cd /Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build\n  make -f /Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/CMakeScripts/ReRunCMake.make\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FECCFF35A1DF3C73B46C612B /* Generate CMakeFiles/ALL_BUILD */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ALL_BUILD";
+			outputPaths = (
+				"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/CMakeFiles/ALL_BUILD",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nif test \"$CONFIGURATION\" = \"Debug\"; then :\n  cd /Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build\n  echo Build\\ all\\ projects\nfi\nif test \"$CONFIGURATION\" = \"Release\"; then :\n  cd /Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build\n  echo Build\\ all\\ projects\nfi\nif test \"$CONFIGURATION\" = \"MinSizeRel\"; then :\n  cd /Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build\n  echo Build\\ all\\ projects\nfi\nif test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :\n  cd /Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build\n  echo Build\\ all\\ projects\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		257418A7537D4E98A70FC326 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1DAF208875B4936ADDEF992 /* avcontext.cc in Sources */,
+				9F50F420F3D144378D020F0B /* decoder.cc in Sources */,
+				502FDDAFE7C2470BAC99729B /* frame.cc in Sources */,
+				E1AD17E1FBFC47749CBBFB19 /* source_capture.cc in Sources */,
+				B6F07B54E2814800953BDE7F /* audio_buffer.cc in Sources */,
+				B6724EFEB0C644B48E993E76 /* media_frame.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A4AD33E0AAC4CEE83E2321C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76F78D540BEA49E1AEF720A4 /* desktop_app.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BE70450ED424E28AB6751E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C80542F3348B4100B8453244 /* custom_recorder.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6780143B6459425B96C9C31A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				115177BD1DF64F678DCA71F6 /* custom_injector.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B545864D59A4875B828FCB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD5EA82967064C21BECF4B67 /* commands_handler.cc in Sources */,
+				DB56F7D90A1B44EB9C30B6D7 /* media_io_interactions.cc in Sources */,
+				7B533F03F939432F911B6750 /* interactions.cc in Sources */,
+				C386E252218E443FB08BA7E8 /* events.cc in Sources */,
+				B0086762982745E397E34EED /* interactions.cc in Sources */,
+				D8B178A2CA9B402D804D7F26 /* macos_ui.mm in Sources */,
+				F6564A87B88E49A88A17BB24 /* ui.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1286A88BA7B4E36AD1DFFE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B68273E0542F4F86B5ACA878 /* custom_video_processor.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		040C852904554A4395A33653 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 885DF81B10084477B31DAE70 /* ZERO_CHECK */;
+			targetProxy = 9D31D3D1D2624CB6B378E941 /* PBXContainerItemProxy */;
+		};
+		103F0A97482748AF8EB4992D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 379C1B31BDD145419F20BE09 /* media_source_file */;
+			targetProxy = 3938EE5BE9F247F3A0EED773 /* PBXContainerItemProxy */;
+		};
+		311CE805D71844D388F2A33E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 885DF81B10084477B31DAE70 /* ZERO_CHECK */;
+			targetProxy = FE86BC50EDF04508B4930D6F /* PBXContainerItemProxy */;
+		};
+		427CCCDCD1F74171A0360CDC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 885DF81B10084477B31DAE70 /* ZERO_CHECK */;
+			targetProxy = 6DC88A02CD9F49F289139D6A /* PBXContainerItemProxy */;
+		};
+		4D74BB1189F94EFAB385C782 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 885DF81B10084477B31DAE70 /* ZERO_CHECK */;
+			targetProxy = 97D241D2AB484CB7B331EAA2 /* PBXContainerItemProxy */;
+		};
+		7884C6B520464FF5ACA6A56E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 48096AE7D6EC464AAC96D2D3 /* custom_recorder */;
+			targetProxy = 49E281968F84458D94F93971 /* PBXContainerItemProxy */;
+		};
+		7952559AB1CA4BD1B51A69BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 885DF81B10084477B31DAE70 /* ZERO_CHECK */;
+			targetProxy = FA8C5F70A99E40EA9FB8B55B /* PBXContainerItemProxy */;
+		};
+		8B343E0543584103A1105B65 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 885DF81B10084477B31DAE70 /* ZERO_CHECK */;
+			targetProxy = 1FA99183EF734C1E9FCAE239 /* PBXContainerItemProxy */;
+		};
+		A15D6D3B84D441F9B3D4226D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6294063369BE455FBBC64E85 /* utils */;
+			targetProxy = CBE6A624AFEE408E86297DBD /* PBXContainerItemProxy */;
+		};
+		A24F6E4B081A478894BB263B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 91C5FD90773D4F0C87BF18B0 /* desktop_app */;
+			targetProxy = 1461E100DF5F45B78E4C43E1 /* PBXContainerItemProxy */;
+		};
+		A7509CF6172C4F0BAF9C12A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8EC3865933074265B604BD27 /* custom_video_processor */;
+			targetProxy = 03B3F5D9CF0C4145AC645879 /* PBXContainerItemProxy */;
+		};
+		B221EF469F6A47289116B554 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 885DF81B10084477B31DAE70 /* ZERO_CHECK */;
+			targetProxy = 882E9374460D444F97C99C60 /* PBXContainerItemProxy */;
+		};
+		BA4844768C574E8AA4C2C716 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 31B7CE673FE849E38B948BA9 /* custom_injector */;
+			targetProxy = ECC18084BDA849EDB092E281 /* PBXContainerItemProxy */;
+		};
+		BD70D15205964250874197F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6294063369BE455FBBC64E85 /* utils */;
+			targetProxy = 58496C7368574FDAADC70683 /* PBXContainerItemProxy */;
+		};
+		CCB1B36EF2714E238AB60471 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 379C1B31BDD145419F20BE09 /* media_source_file */;
+			targetProxy = 60F72D80B3A149D2B3BED567 /* PBXContainerItemProxy */;
+		};
+		D6E508B93D4346F592895DC3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 379C1B31BDD145419F20BE09 /* media_source_file */;
+			targetProxy = F9D1A1AE0E8B4D8B882C0F20 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		06560E9A46E348AE90CDE12F /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " $(inherited)";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		072EFCEE874C476E9E1ECBDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
+					"'-std=gnu++17'",
+				);
+				OTHER_LIBTOOLFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = custom_recorder;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/custom_recorder";
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/include",
+					"$(inherited)",
+				);
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		08E4112DA3724DC4BEF4E7F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/utilities/../../..",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/media_source/../../..",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/media_source/../../../..",
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/lib",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/../../../../lib",
+					"$(inherited)",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "   '-std=gnu++17' ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/lib/libdolbyio_comms_sdk.dylib",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/utilities/Debug/libutils.a",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/media_source/Debug/libmedia_source_file.a",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/lib/libdolbyio_comms_multimedia_streaming_addon.dylib",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/lib/libdolbyio_comms_media.dylib",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/lib/libavcodec.dylib",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/lib/libavformat.dylib",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/lib/libavutil.dylib",
+					"-framework",
+					CoreVideo,
+					"-framework",
+					QuartzCore,
+					"-framework",
+					Cocoa,
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = desktop_app;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/desktop_app";
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/include",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/ffmpeg-headers",
+					"$(inherited)",
+				);
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		090100194D42469CA7BAAC88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "   '-std=gnu++17' ";
+				OTHER_LIBTOOLFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = custom_video_processor;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/custom_video_processor";
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/include",
+					"$(inherited)",
+				);
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		0D7318A3E43F409B9F4BFC62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/media_source/../../..",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/media_source/../../../..",
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
+					"'-std=gnu++17'",
+				);
+				OTHER_LIBTOOLFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = media_source_file;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/media_source";
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/include",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/ffmpeg-headers",
+					"$(inherited)",
+				);
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		1258A7EAAFF842949DA39256 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
+					"'-std=gnu++17'",
+				);
+				OTHER_LIBTOOLFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = custom_recorder;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/custom_recorder";
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/include",
+					"$(inherited)",
+				);
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		187119C7FB6346178BAE2C9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "   '-std=gnu++17' ";
+				OTHER_LIBTOOLFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = custom_recorder;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/custom_recorder";
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/include",
+					"$(inherited)",
+				);
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		2EB7495119EA4826BF3A5BD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/utilities/../../..",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/media_source/../../..",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/media_source/../../../..",
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "   '-std=gnu++17' ";
+				OTHER_LIBTOOLFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = utils;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/utilities";
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/include",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/ffmpeg-headers",
+					"$(inherited)",
+				);
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		37C75E015C0E489EB4E8FFEE /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
+					"'-std=gnu++17'",
+				);
+				OTHER_LIBTOOLFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = custom_video_processor;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/custom_video_processor";
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/include",
+					"$(inherited)",
+				);
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		3FF36269FB1C457684B6D540 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/utilities/../../..",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/media_source/../../..",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/media_source/../../../..",
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/lib",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/../../../../lib",
+					"$(inherited)",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
+					"'-std=gnu++17'",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/lib/libdolbyio_comms_sdk.dylib",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/utilities/Release/libutils.a",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/media_source/Release/libmedia_source_file.a",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/lib/libdolbyio_comms_multimedia_streaming_addon.dylib",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/lib/libdolbyio_comms_media.dylib",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/lib/libavcodec.dylib",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/lib/libavformat.dylib",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/lib/libavutil.dylib",
+					"-framework",
+					CoreVideo,
+					"-framework",
+					QuartzCore,
+					"-framework",
+					Cocoa,
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = desktop_app;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/desktop_app";
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/include",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/ffmpeg-headers",
+					"$(inherited)",
+				);
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		5F322241DA344A9391AC467F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/media_source/../../..",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/media_source/../../../..",
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "   '-std=gnu++17' ";
+				OTHER_LIBTOOLFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = media_source_file;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/media_source";
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/include",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/ffmpeg-headers",
+					"$(inherited)",
+				);
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		5FB52F536FF440F4919C7716 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " $(inherited)";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		6563950696E44634B0DF34E2 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk;
+				SYMROOT = "/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/build";
+			};
+			name = MinSizeRel;
+		};
+		660E0A1C832B41B79E7B3026 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
+					"'-std=gnu++17'",
+				);
+				OTHER_LIBTOOLFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = custom_injector;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/custom_injector";
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/include",
+					"$(inherited)",
+				);
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		6FF68DA19C7C414098FBA3E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " $(inherited)";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		74DD04AAA8C64895BF501F92 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " $(inherited)";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		74E618B7136448E8AF477116 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/media_source/../../..",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/media_source/../../../..",
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
+					"'-std=gnu++17'",
+				);
+				OTHER_LIBTOOLFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = media_source_file;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/media_source";
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/include",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/ffmpeg-headers",
+					"$(inherited)",
+				);
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		881A687EC14C4C4BBE09A109 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk;
+				SYMROOT = "/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/build";
+			};
+			name = Release;
+		};
+		8D0E2545D5AB4EBE9856F7A2 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
+					"'-std=gnu++17'",
+				);
+				OTHER_LIBTOOLFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = custom_recorder;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/custom_recorder";
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/include",
+					"$(inherited)",
+				);
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		90B72FAAEA61417F97357CF6 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/utilities/../../..",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/media_source/../../..",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/media_source/../../../..",
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/lib",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/../../../../lib",
+					"$(inherited)",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
+					"'-std=gnu++17'",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/lib/libdolbyio_comms_sdk.dylib",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/utilities/RelWithDebInfo/libutils.a",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/media_source/RelWithDebInfo/libmedia_source_file.a",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/lib/libdolbyio_comms_multimedia_streaming_addon.dylib",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/lib/libdolbyio_comms_media.dylib",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/lib/libavcodec.dylib",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/lib/libavformat.dylib",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/lib/libavutil.dylib",
+					"-framework",
+					CoreVideo,
+					"-framework",
+					QuartzCore,
+					"-framework",
+					Cocoa,
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = desktop_app;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/desktop_app";
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/include",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/ffmpeg-headers",
+					"$(inherited)",
+				);
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		91659844DC4549C98E75F9BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " $(inherited)";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		97DB4683A68140E7B4F00540 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
+					"'-std=gnu++17'",
+				);
+				OTHER_LIBTOOLFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = custom_video_processor;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/custom_video_processor";
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/include",
+					"$(inherited)",
+				);
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		9D704601DB284503A902EF92 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/utilities/../../..",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/media_source/../../..",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/media_source/../../../..",
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/lib",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/../../../../lib",
+					"$(inherited)",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
+					"'-std=gnu++17'",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/lib/libdolbyio_comms_sdk.dylib",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/utilities/MinSizeRel/libutils.a",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/media_source/MinSizeRel/libmedia_source_file.a",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/lib/libdolbyio_comms_multimedia_streaming_addon.dylib",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/lib/libdolbyio_comms_media.dylib",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/lib/libavcodec.dylib",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/lib/libavformat.dylib",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/lib/libavutil.dylib",
+					"-framework",
+					CoreVideo,
+					"-framework",
+					QuartzCore,
+					"-framework",
+					Cocoa,
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = desktop_app;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/desktop_app";
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/include",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/ffmpeg-headers",
+					"$(inherited)",
+				);
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		9E10823FAAB24F3899AA7F02 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/media_source/../../..",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/media_source/../../../..",
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
+					"'-std=gnu++17'",
+				);
+				OTHER_LIBTOOLFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = media_source_file;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/media_source";
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/include",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/ffmpeg-headers",
+					"$(inherited)",
+				);
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		ACD63FD0E62E447D9BE31838 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/utilities/../../..",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/media_source/../../..",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/media_source/../../../..",
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
+					"'-std=gnu++17'",
+				);
+				OTHER_LIBTOOLFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = utils;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/utilities";
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/include",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/ffmpeg-headers",
+					"$(inherited)",
+				);
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		AEFF8FAFCC1D44238B44082C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk;
+				SYMROOT = "/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/build";
+			};
+			name = Debug;
+		};
+		BB514DDEC450498D8CF72967 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " $(inherited)";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		DAAF62D14F2E4AD3B0A4154A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
+					"'-std=gnu++17'",
+				);
+				OTHER_LIBTOOLFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = custom_injector;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/custom_injector";
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/include",
+					"$(inherited)",
+				);
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		E34D4B7B0D2446388F4DD0F8 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
+					"'-std=gnu++17'",
+				);
+				OTHER_LIBTOOLFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = custom_injector;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/custom_injector";
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/include",
+					"$(inherited)",
+				);
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		EC9257295DDA4651970CA80A /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " $(inherited)";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		EEFF9336B6D942C28B01AEEF /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk;
+				SYMROOT = "/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/build";
+			};
+			name = RelWithDebInfo;
+		};
+		F45844ECDC044A8DAE14F60B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "   '-std=gnu++17' ";
+				OTHER_LIBTOOLFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = custom_injector;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/custom_injector";
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/include",
+					"$(inherited)",
+				);
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		F486B868789140C189CF6DBC /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/utilities/../../..",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/media_source/../../..",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/media_source/../../../..",
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
+					"'-std=gnu++17'",
+				);
+				OTHER_LIBTOOLFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = utils;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/utilities";
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/include",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/ffmpeg-headers",
+					"$(inherited)",
+				);
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		F5538B8EAD924248A94E9203 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " $(inherited)";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		F8A756C612C845B8B6268BCD /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
+					"'-std=gnu++17'",
+				);
+				OTHER_LIBTOOLFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = custom_video_processor;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/custom_video_processor";
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/include",
+					"$(inherited)",
+				);
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		F9010430B97E48D9BBF33AE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/utilities/../../..",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/media_source/../../..",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/media_source/../../../..",
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
+					"'-std=gnu++17'",
+				);
+				OTHER_LIBTOOLFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = utils;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/utilities";
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/include",
+					"/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/ffmpeg-headers",
+					"$(inherited)",
+				);
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		009E9FBFA353452B99B44FD1 /* Build configuration list for PBXNativeTarget "custom_injector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F45844ECDC044A8DAE14F60B /* Debug */,
+				DAAF62D14F2E4AD3B0A4154A /* Release */,
+				660E0A1C832B41B79E7B3026 /* MinSizeRel */,
+				E34D4B7B0D2446388F4DD0F8 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		2D7F5F0C9F3C4A95A017D56E /* Build configuration list for PBXNativeTarget "desktop_app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08E4112DA3724DC4BEF4E7F4 /* Debug */,
+				3FF36269FB1C457684B6D540 /* Release */,
+				9D704601DB284503A902EF92 /* MinSizeRel */,
+				90B72FAAEA61417F97357CF6 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		35AF86CECAAE4E41B9422B8E /* Build configuration list for PBXNativeTarget "utils" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EB7495119EA4826BF3A5BD5 /* Debug */,
+				F9010430B97E48D9BBF33AE2 /* Release */,
+				F486B868789140C189CF6DBC /* MinSizeRel */,
+				ACD63FD0E62E447D9BE31838 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		35E6A2C9C14F4A048F9673CC /* Build configuration list for PBXProject "dolbyio_comms_sample_code" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEFF8FAFCC1D44238B44082C /* Debug */,
+				881A687EC14C4C4BBE09A109 /* Release */,
+				6563950696E44634B0DF34E2 /* MinSizeRel */,
+				EEFF9336B6D942C28B01AEEF /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		459492E5E2934F17BEDEDD03 /* Build configuration list for PBXNativeTarget "media_source_file" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F322241DA344A9391AC467F /* Debug */,
+				0D7318A3E43F409B9F4BFC62 /* Release */,
+				9E10823FAAB24F3899AA7F02 /* MinSizeRel */,
+				74E618B7136448E8AF477116 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		573E33C0E705470DABEE0476 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB514DDEC450498D8CF72967 /* Debug */,
+				91659844DC4549C98E75F9BB /* Release */,
+				EC9257295DDA4651970CA80A /* MinSizeRel */,
+				06560E9A46E348AE90CDE12F /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9CBD4FA2809642E8BDEDDB66 /* Build configuration list for PBXNativeTarget "custom_video_processor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				090100194D42469CA7BAAC88 /* Debug */,
+				97DB4683A68140E7B4F00540 /* Release */,
+				37C75E015C0E489EB4E8FFEE /* MinSizeRel */,
+				F8A756C612C845B8B6268BCD /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CDCE9454710345DC8E2B1BEA /* Build configuration list for PBXNativeTarget "custom_recorder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				187119C7FB6346178BAE2C9A /* Debug */,
+				072EFCEE874C476E9E1ECBDC /* Release */,
+				8D0E2545D5AB4EBE9856F7A2 /* MinSizeRel */,
+				1258A7EAAFF842949DA39256 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F3FA8DB22A3D4960B119EE8B /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5538B8EAD924248A94E9203 /* Debug */,
+				6FF68DA19C7C414098FBA3E8 /* Release */,
+				74DD04AAA8C64895BF501F92 /* MinSizeRel */,
+				5FB52F536FF440F4919C7716 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AAC5AA9412F14659A4B3F6AD /* Project object */;
+}
