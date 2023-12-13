@@ -1,8 +1,0 @@
-.. _api_inject_video:
-
-Video
-=====
-For details about Video Injection please refer to :ref:`vid_frame_handle`. The application must create a :cpp:class:`Video Source <dolbyio::comms::video_source>` and then provide it to the SDK using the 
-:cpp:func:`Local Video Service Start <dolbyio::comms::services::local_video::start>` method.
-
-See :ref:`injection_example` for an example of child injection class for all possible media.

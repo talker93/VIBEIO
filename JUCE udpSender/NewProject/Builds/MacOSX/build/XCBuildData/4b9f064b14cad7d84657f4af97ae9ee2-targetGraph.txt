@@ -1,4 +1,0 @@
-Target dependency graph (2 targets)
-NewProject - Shared Code in NewProject, no dependencies
-NewProject - AU in NewProject, depends on:
-NewProject - Shared Code in NewProject (explicit)

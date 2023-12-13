@@ -1,4 +1,0 @@
-Target dependency graph (2 targets)
-ZERO_CHECK in dolbyio_comms_sample_code, no dependencies
-custom_recorder in dolbyio_comms_sample_code, depends on:
-ZERO_CHECK in dolbyio_comms_sample_code (explicit)

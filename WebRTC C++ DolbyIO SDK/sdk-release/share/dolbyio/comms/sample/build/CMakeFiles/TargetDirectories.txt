@@ -1,8 +1,0 @@
-/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/CMakeFiles/ALL_BUILD.dir
-/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/CMakeFiles/ZERO_CHECK.dir
-/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/custom_injector/CMakeFiles/custom_injector.dir
-/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/custom_recorder/CMakeFiles/custom_recorder.dir
-/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/custom_video_processor/CMakeFiles/custom_video_processor.dir
-/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/media_source/CMakeFiles/media_source_file.dir
-/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/desktop_app/CMakeFiles/desktop_app.dir
-/Users/shanjiang/Desktop/dolbyio_test/sdk-release/share/dolbyio/comms/sample/build/utilities/CMakeFiles/utils.dir
