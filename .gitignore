@@ -1,0 +1,8 @@
+.DS_Store
+.d
+.o
+.a
+.plist
+.exe
+.bin
+/dev/PC_Console_Electron/node_modules

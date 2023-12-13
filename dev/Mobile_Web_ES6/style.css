@@ -1,0 +1,79 @@
+/* #app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+} */
+
+body {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* .center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 20px;
+} */
+
+/* .aParent div {
+  float: left;
+  clear: none;
+} */
+
+#comp_threshold,
+#comp_threshold_val,
+#comp_knee,
+#comp_knee_val,
+#comp_ratio,
+#comp_ratio_val,
+#comp_reduction,
+#comp_release,
+#comp_release_val,
+#comp_attack,
+#comp_attack_val,
+#comp_bypass,
+#rev_type,
+#rev_mix,
+#rev_bypass,
+#eq_bypass,
+#gain_bypass,
+#pan_bypass,
+#eq_type,
+#eq_freq,
+#reverb,
+#eq1,
+#eq2,
+#eq3,
+#gain,
+#pan,
+#oScope,
+#spec {
+  margin: auto;
+  /* width: 50%; */
+  padding: 10px;
+  display: inline-block;
+}
